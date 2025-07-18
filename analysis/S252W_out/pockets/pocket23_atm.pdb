@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    23:
+HEADER 0  - Pocket Score                      : -0.0212
+HEADER 1  - Drug Score                        : 0.0018
+HEADER 2  - Number of alpha spheres           :    18
+HEADER 3  - Mean alpha-sphere radius          : 4.0419
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6055
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 12.4000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.4000
+HEADER 9  - Pocket volume (Monte Carlo)       : 224.1270
+HEADER 10 - Pocket volume (convex hull)       : 4.8195
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.6667
+ATOM   4832  CE1 TYR E 301     -18.166   2.439 -23.652  0.00  0.00           C 0
+ATOM   4744   CB GLU E 296     -14.986   5.069 -16.833  0.00  0.00           C 0
+ATOM   4747  OE1 GLU E 296     -16.898   6.965 -16.806  0.00  0.00           O 0
+ATOM   4746   CD GLU E 296     -17.168   6.062 -16.052  0.00  0.00           C 0
+ATOM   4607   NZ LYS E 286     -14.160   6.228 -21.045  0.53  4.37           N 0
+ATOM   4830  CD1 TYR E 301     -17.692   3.565 -24.297  0.00  0.00           C 0
+ATOM   4793   CB VAL E 299     -14.409   0.903 -21.752  0.00  0.00           C 0
+ATOM   4795  CG2 VAL E 299     -14.280  -0.380 -20.945  0.00  0.00           C 0
+ATOM   4835   OH TYR E 301     -19.473   0.436 -23.686  0.00  0.00           O 0
+ATOM   4745   CG GLU E 296     -16.186   4.932 -15.908  0.00  0.00           C 0
+ATOM   4743    O GLU E 296     -13.249   4.033 -18.993  0.37  1.07           O 0
+ATOM   4794  CG1 VAL E 299     -15.313   0.693 -22.959  0.00  0.00           C 0
+ATOM   4741   CA GLU E 296     -13.941   3.961 -16.681  0.00  0.00           C 0
+ATOM   4721    O LYS E 295     -14.151   1.938 -14.914  0.68  9.64           O 0
+ATOM   4792    O VAL E 299     -13.390   3.765 -22.348  0.00  0.00           O 0
+TER
+END

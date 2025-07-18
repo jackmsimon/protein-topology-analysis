@@ -1,0 +1,36 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    26:
+HEADER 0  - Pocket Score                      : -0.0461
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :    17
+HEADER 3  - Mean alpha-sphere radius          : 4.1245
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5775
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 14.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.3333
+HEADER 9  - Pocket volume (Monte Carlo)       : 255.7842
+HEADER 10 - Pocket volume (convex hull)       : 5.8693
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.7059
+ATOM   3290  CG2 ILE E 202      16.723 -12.382  11.761  0.00  0.00           C 0
+ATOM   3127   CE LYS E 193      19.159 -15.720  10.830  0.00  0.00           C 0
+ATOM   3128   NZ LYS E 193      20.210 -15.079   9.994  0.55  2.19           N 0
+ATOM   3289  CG1 ILE E 202      16.846 -11.982  14.236  0.00  0.00           C 0
+ATOM   2608   NZ LYS E 161      19.204  -7.641  12.324  0.00  0.00           N 0
+ATOM   2607   CE LYS E 161      17.896  -8.302  12.065  0.00  0.00           C 0
+ATOM   3328  OE2 GLU E 204      19.158 -13.324   8.034  0.00  0.00           O 0
+ATOM   3291  CD1 ILE E 202      17.310 -12.719  15.472  0.00  0.00           C 0
+ATOM   3167  NH1 ARG E 195      23.837 -11.137  17.599  0.00  0.00           N 0
+ATOM   3126   CD LYS E 193      19.734 -16.794  11.742  0.00  0.00           C 0
+ATOM   3164   CD ARG E 195      22.223 -12.988  19.009  0.00  0.00           C 0
+ATOM   3124   CB LYS E 193      18.036 -16.798  13.595  0.00  0.00           C 0
+ATOM   3145    O VAL E 194      19.098 -16.534  18.471  0.00  0.00           O 0
+ATOM   3162   CB ARG E 195      19.756 -12.779  18.772  0.00  0.00           C 0
+TER
+END

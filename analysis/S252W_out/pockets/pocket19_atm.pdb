@@ -1,0 +1,37 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    19:
+HEADER 0  - Pocket Score                      : -0.0103
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    17
+HEADER 3  - Mean alpha-sphere radius          : 4.0494
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7030
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : -9.5000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 4.6667
+HEADER 9  - Pocket volume (Monte Carlo)       : 171.7561
+HEADER 10 - Pocket volume (convex hull)       : 3.4687
+HEADER 11 - Charge Score                      :     3
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1176
+ATOM   1995   CB LYS A 124      13.001   6.121   7.726  0.00  0.00           C 0
+ATOM   1997   CD LYS A 124      14.591   4.542   8.864  0.00  0.00           C 0
+ATOM   1996   CG LYS A 124      14.272   5.294   7.581  0.00  0.00           C 0
+ATOM   1991    N LYS A 124      13.657   8.003   6.293  0.68  3.28           N 0
+ATOM    266  OD1 ASN A  16      11.229   7.242  11.523  0.54  3.21           O 0
+ATOM   2013    N ALA A 125      11.249   8.877   7.037  0.69  1.09           N 0
+ATOM   1777  NH1 ARG A 109      13.133   8.171  13.859  0.34  6.56           N 0
+ATOM    267  ND2 ASN A  16      10.006   9.079  11.179  0.47  4.37           N 0
+ATOM   1859   NZ LYS A 114      12.792  14.245   9.571  0.00  0.00           N 0
+ATOM   1981  OE1 GLN A 123      13.027  13.236   7.011  0.00  0.00           O 0
+ATOM   2017   CB ALA A 125      10.305  10.955   7.838  0.00  0.00           C 0
+ATOM   1979   CG GLN A 123      14.871  12.214   5.880  0.00  0.00           C 0
+ATOM   1980   CD GLN A 123      14.108  13.389   6.426  0.00  0.00           C 0
+ATOM   1978   CB GLN A 123      13.985  11.043   5.534  0.00  0.00           C 0
+ATOM   1975   CA GLN A 123      14.786   9.800   5.151  0.00  0.00           C 0
+TER
+END

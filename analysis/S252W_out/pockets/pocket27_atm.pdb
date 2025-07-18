@@ -1,0 +1,42 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    27:
+HEADER 0  - Pocket Score                      : -0.0502
+HEADER 1  - Drug Score                        : 0.3473
+HEADER 2  - Number of alpha spheres           :    27
+HEADER 3  - Mean alpha-sphere radius          : 3.8817
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5763
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 53.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.3333
+HEADER 9  - Pocket volume (Monte Carlo)       : 224.8826
+HEADER 10 - Pocket volume (convex hull)       : 8.9236
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 23.0000
+HEADER 13 - Number of apolar alpha sphere     :    24
+HEADER 14 - Proportion of apolar alpha sphere : 0.8889
+ATOM   4463  CE1 HIS E 278       0.399   6.033 -32.766  0.00  0.00           C 0
+ATOM   5038  CG2 THR E 314      -1.109   3.368 -28.207  0.00  0.00           C 0
+ATOM   5183   CZ PHE E 325       4.464   2.370 -28.284  0.00  0.00           C 0
+ATOM   4529  CD1 LEU E 282       1.462  10.519 -30.237  0.00  0.00           C 0
+ATOM   4421  CD1 ILE E 276      -1.205   8.977 -26.618  0.00  0.00           C 0
+ATOM   5182  CE2 PHE E 325       4.504   2.700 -26.944  0.00  0.00           C 0
+ATOM   5181  CE1 PHE E 325       3.318   1.827 -28.824  0.00  0.00           C 0
+ATOM   5063  CD2 LEU E 316       0.735   7.160 -24.088  0.00  0.00           C 0
+ATOM   5036   CB THR E 314      -2.123   3.852 -29.232  0.00  0.00           C 0
+ATOM   4418   CB ILE E 276      -3.018   8.270 -28.264  0.00  0.00           C 0
+ATOM   5215   OG SER E 327      -0.879   0.830 -31.453  0.78  4.29           O 0
+ATOM   5004  OE2 GLU E 312      -0.570   2.054 -34.004  0.36  6.43           O 0
+ATOM   4464  NE2 HIS E 278      -0.691   5.380 -32.399  0.00  0.00           N 0
+ATOM   5150  CD1 ILE E 323       6.875   5.280 -23.162  0.00  0.00           C 0
+ATOM   5062  CD1 LEU E 316       1.656   4.863 -23.673  0.00  0.00           C 0
+ATOM   4420  CG2 ILE E 276      -2.475   9.100 -29.417  0.00  0.00           C 0
+ATOM   5037  OG1 THR E 314      -1.623   3.595 -30.551  0.68  1.07           O 0
+ATOM   5180  CD2 PHE E 325       3.396   2.485 -26.147  0.00  0.00           C 0
+ATOM   5179  CD1 PHE E 325       2.211   1.613 -28.024  0.00  0.00           C 0
+ATOM   5178   CG PHE E 325       2.236   1.940 -26.676  0.00  0.00           C 0
+TER
+END

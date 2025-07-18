@@ -1,0 +1,43 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    13:
+HEADER 0  - Pocket Score                      : 0.0539
+HEADER 1  - Drug Score                        : 0.0018
+HEADER 2  - Number of alpha spheres           :    26
+HEADER 3  - Mean alpha-sphere radius          : 3.8561
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4934
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 24.8571
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.4286
+HEADER 9  - Pocket volume (Monte Carlo)       : 311.3305
+HEADER 10 - Pocket volume (convex hull)       : 8.9133
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 7.0000
+HEADER 13 - Number of apolar alpha sphere     :     8
+HEADER 14 - Proportion of apolar alpha sphere : 0.3077
+ATOM   3185    O ASN E 196      18.812 -12.544  24.904  0.00  0.00           O 0
+ATOM   3241  CZ2 TRP E 199      16.103 -11.377  28.730  0.00  0.00           C 0
+ATOM   2762    O PRO E 172      15.521 -15.356  30.524  0.71  5.36           O 0
+ATOM   2747   CG MET E 171      18.494 -13.544  32.218  0.00  0.00           C 0
+ATOM   3238  NE1 TRP E 199      16.841  -9.552  27.187  0.54  7.66           N 0
+ATOM   2748   SD MET E 171      18.035 -11.805  32.077  0.00  0.00           S 0
+ATOM   2749   CE MET E 171      19.491 -11.015  32.756  0.00  0.00           C 0
+ATOM   3197   CA GLN E 197      21.298 -11.641  24.005  0.00  0.00           C 0
+ATOM   3199    O GLN E 197      20.736  -9.359  24.502  0.00  0.00           O 0
+ATOM   2787    N MET E 174      13.412 -17.221  27.024  0.00  0.00           N 0
+ATOM   3242  CZ3 TRP E 199      14.398 -12.800  27.781  0.00  0.00           C 0
+ATOM   3187   CG ASN E 196      18.092 -16.727  23.800  0.00  0.00           C 0
+ATOM   3188  OD1 ASN E 196      16.978 -16.499  23.314  0.79  2.14           O 0
+ATOM   3243  CH2 TRP E 199      15.229 -12.461  28.819  0.00  0.00           C 0
+ATOM   3186   CB ASN E 196      19.043 -15.603  24.103  0.00  0.00           C 0
+ATOM   3189  ND2 ASN E 196      18.509 -17.936  24.077  0.00  0.00           N 0
+ATOM   2774   CA THR E 173      14.219 -17.443  29.290  0.00  0.00           C 0
+ATOM   2779  CG2 THR E 173      15.322 -19.464  30.303  0.00  0.00           C 0
+ATOM   2777   CB THR E 173      14.291 -18.981  29.295  0.00  0.00           C 0
+ATOM   2790    O MET E 174      12.862 -18.640  24.534  0.35  5.36           O 0
+ATOM   2791   CB MET E 174      13.079 -15.588  25.269  0.00  0.00           C 0
+TER
+END

@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    15:
+HEADER 0  - Pocket Score                      : 0.0383
+HEADER 1  - Drug Score                        : 0.0028
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 3.8547
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6344
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 24.5000
+HEADER 7  - Polarity Score                    :     5
+HEADER 8  - Amino Acid based volume Score     : 5.1667
+HEADER 9  - Pocket volume (Monte Carlo)       : 195.2015
+HEADER 10 - Pocket volume (convex hull)       : 4.9422
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 11.0000
+HEADER 13 - Number of apolar alpha sphere     :    12
+HEADER 14 - Proportion of apolar alpha sphere : 0.5714
+ATOM   2400   CA GLU E 148       4.749   0.086  20.752  0.00  0.00           C 0
+ATOM   2385    O MET E 147       5.256  -2.630  21.068  0.47  2.14           O 0
+ATOM   2399    N GLU E 148       6.029  -0.515  21.130  0.00  0.00           N 0
+ATOM   2404   CG GLU E 148       4.950   2.035  22.408  0.00  0.00           C 0
+ATOM   2384    C MET E 147       6.183  -1.830  21.245  0.00  0.00           C 0
+ATOM   2334    O THR E 144       7.775   0.257  24.034  0.56  2.14           O 0
+ATOM   3659  CE1 HIS E 227       3.461  -4.849  23.093  0.00  0.00           C 0
+ATOM   2443   NE ARG E 150      -0.121  -3.179  21.346  0.60  2.19           N 0
+ATOM   2446  NH2 ARG E 150      -1.106  -2.821  23.406  0.00  0.00           N 0
+ATOM   2335   CB THR E 144       7.783  -0.425  27.011  0.00  0.00           C 0
+ATOM   2386   CB MET E 147       7.510  -3.069  22.961  0.00  0.00           C 0
+ATOM   2337  CG2 THR E 144       7.850  -1.491  28.094  0.00  0.00           C 0
+ATOM   3657  ND1 HIS E 227       3.607  -5.917  23.859  0.00  0.00           N 0
+ATOM   2285  CD1 TRP E 141       6.619  -5.323  29.226  0.00  0.00           C 0
+ATOM   2287  NE1 TRP E 141       5.919  -6.409  28.753  0.65  5.47           N 0
+ATOM   2389   CE MET E 147       7.508  -5.850  24.724  0.00  0.00           C 0
+ATOM   2388   SD MET E 147       8.699  -4.540  24.989  0.00  0.00           S 0
+TER
+END

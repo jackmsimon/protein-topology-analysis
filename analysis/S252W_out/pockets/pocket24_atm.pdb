@@ -1,0 +1,39 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    24:
+HEADER 0  - Pocket Score                      : -0.0307
+HEADER 1  - Drug Score                        : 0.0001
+HEADER 2  - Number of alpha spheres           :    20
+HEADER 3  - Mean alpha-sphere radius          : 4.2330
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7407
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 18.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Amino Acid based volume Score     : 3.4286
+HEADER 9  - Pocket volume (Monte Carlo)       : 327.3688
+HEADER 10 - Pocket volume (convex hull)       : 7.3665
+HEADER 11 - Charge Score                      :     1
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.1000
+ATOM   5194   CA HIS E 326      -0.984  -1.817 -27.539  0.00  0.00           C 0
+ATOM   5200  CD2 HIS E 326       0.298  -4.150 -26.079  0.00  0.00           C 0
+ATOM   5197   CB HIS E 326      -1.828  -2.975 -26.998  0.00  0.00           C 0
+ATOM   5210    N SER E 327      -1.790  -1.400 -29.804  0.58  5.47           N 0
+ATOM   5198   CG HIS E 326      -1.038  -3.985 -26.226  0.00  0.00           C 0
+ATOM   3980    N GLY E 246      -3.744  -9.226 -26.369  0.71  1.09           N 0
+ATOM   5199  ND1 HIS E 326      -1.631  -4.985 -25.484  0.56  1.09           N 0
+ATOM   5201  CE1 HIS E 326      -0.693  -5.722 -24.915  0.00  0.00           C 0
+ATOM   5202  NE2 HIS E 326       0.485  -5.236 -25.260  0.43  4.37           N 0
+ATOM   3981   CA GLY E 246      -4.876  -9.199 -27.272  0.00  0.00           C 0
+ATOM   3990    O LEU E 247      -4.265  -4.776 -26.039  0.00  0.00           O 0
+ATOM   5176    O PHE E 325       1.639  -1.368 -26.724  0.62  3.21           O 0
+ATOM   3982    C GLY E 246      -5.738  -7.946 -27.207  0.00  0.00           C 0
+ATOM   4009    O PRO E 248      -6.694  -4.695 -29.438  0.58  6.43           O 0
+ATOM   5213    O SER E 327      -3.493  -2.895 -31.403  0.00  0.00           O 0
+ATOM   3983    O GLY E 246      -6.573  -7.726 -28.093  0.00  0.00           O 0
+ATOM   4037  ND2 ASN E 250      -6.777  -6.433 -34.980  0.00  0.00           N 0
+TER
+END

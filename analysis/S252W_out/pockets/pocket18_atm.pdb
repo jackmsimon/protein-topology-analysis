@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    18:
+HEADER 0  - Pocket Score                      : 0.0248
+HEADER 1  - Drug Score                        : 0.0007
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 4.0910
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6023
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 44.7143
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 5.1429
+HEADER 9  - Pocket volume (Monte Carlo)       : 252.4407
+HEADER 10 - Pocket volume (convex hull)       : 2.2256
+HEADER 11 - Charge Score                      :     2
+HEADER 12 - Local hydrophobic density Score   : 9.0000
+HEADER 13 - Number of apolar alpha sphere     :    10
+HEADER 14 - Proportion of apolar alpha sphere : 0.4762
+ATOM   4256   CB TYR E 266      -1.890  -5.592 -14.421  0.00  0.00           C 0
+ATOM   4218   CB LYS E 264      -7.707  -5.224 -18.959  0.00  0.00           C 0
+ATOM   4239    O VAL E 265      -4.728  -2.912 -15.104  0.00  0.00           O 0
+ATOM   4238    C VAL E 265      -3.917  -3.121 -16.007  0.00  0.00           C 0
+ATOM     65  NE2 HIS A   5      -5.699  -6.782 -11.314  0.00  0.00           N 0
+ATOM   3960  OE1 GLN E 244      -7.761  -8.711 -19.781  0.00  0.00           O 0
+ATOM   3953    N GLN E 244      -3.278  -6.395 -20.959  0.00  0.00           N 0
+ATOM   3918    O ILE E 242      -1.303  -4.522 -18.123  0.00  0.00           O 0
+ATOM   3954   CA GLN E 244      -3.769  -7.735 -21.248  0.00  0.00           C 0
+ATOM   3921  CG2 ILE E 242       1.129  -7.036 -18.296  0.00  0.00           C 0
+ATOM      9  CE1 PHE A   1       0.632 -10.712 -15.156  0.00  0.00           C 0
+ATOM   3957   CB GLN E 244      -5.263  -7.834 -20.929  0.00  0.00           C 0
+ATOM   3958   CG GLN E 244      -5.857  -9.215 -21.148  0.00  0.00           C 0
+ATOM   4252    N TYR E 266      -2.775  -3.765 -15.819  0.68  1.09           N 0
+ATOM   4217    O LYS E 264      -4.865  -4.142 -19.663  0.00  0.00           O 0
+ATOM   4216    C LYS E 264      -5.764  -3.643 -18.979  0.00  0.00           C 0
+TER
+END

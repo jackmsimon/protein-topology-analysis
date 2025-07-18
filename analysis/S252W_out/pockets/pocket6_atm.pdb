@@ -1,0 +1,40 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     6:
+HEADER 0  - Pocket Score                      : 0.1041
+HEADER 1  - Drug Score                        : 0.0002
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 3.8610
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.4563
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 22.0909
+HEADER 7  - Polarity Score                    :     8
+HEADER 8  - Amino Acid based volume Score     : 4.7273
+HEADER 9  - Pocket volume (Monte Carlo)       : 295.2663
+HEADER 10 - Pocket volume (convex hull)       : 16.9485
+HEADER 11 - Charge Score                      :     4
+HEADER 12 - Local hydrophobic density Score   : 1.0000
+HEADER 13 - Number of apolar alpha sphere     :     2
+HEADER 14 - Proportion of apolar alpha sphere : 0.0952
+ATOM   1470   OH TYR A  92       9.592  -1.451   5.171  0.52  2.14           O 0
+ATOM   2422   NZ LYS E 149       9.004  -0.272  11.999  0.00  0.00           N 0
+ATOM    245   CE LYS A  15      12.572   0.623   6.805  0.00  0.00           C 0
+ATOM    243   CG LYS A  15      10.436   1.813   7.385  0.00  0.00           C 0
+ATOM   2563  ND2 ASN E 158      11.696  -5.233   5.830  0.27  8.75           N 0
+ATOM    214  CE1 TYR A  13       4.919  -0.163   8.450  0.00  0.00           C 0
+ATOM   2511  CG1 VAL E 154       8.083  -5.488   7.485  0.00  0.00           C 0
+ATOM   2573    O THR E 159      12.897  -7.191   8.083  0.00  0.00           O 0
+ATOM   2485  ND1 HIS E 152       8.184  -4.361  13.089  0.59  5.47           N 0
+ATOM   2487  CE1 HIS E 152       8.449  -4.015  14.336  0.00  0.00           C 0
+ATOM   2603    O LYS E 161      11.534  -7.045  14.444  0.00  0.00           O 0
+ATOM   2600    N LYS E 161      12.488  -8.416  12.172  0.00  0.00           N 0
+ATOM   2483   CB HIS E 152       6.297  -5.358  11.741  0.00  0.00           C 0
+ATOM   2585   CA VAL E 160      11.768  -8.925   9.920  0.00  0.00           C 0
+ATOM   2589  CG1 VAL E 160       9.518  -9.304  10.978  0.00  0.00           C 0
+ATOM   2499    O ALA E 153       5.776  -3.016   6.872  0.80  3.21           O 0
+ATOM    217   OH TYR A  13       4.996  -1.054  10.681  0.00  0.00           O 0
+ATOM   2480   CA HIS E 152       5.135  -4.492  11.243  0.00  0.00           C 0
+TER
+END
