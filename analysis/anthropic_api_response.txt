@@ -1,0 +1,14 @@
+=== Anthropic API Response ===
+Model: claude-3-7-sonnet-20250219
+Usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=27080, output_tokens=198, service_tier='standard')
+Content: Looking at the analysis data, I need to identify a pocket containing residues with high contact changes and prioritize them appropriately.
+
+Based on the contact analysis and pocket information, I'll select the most promising pocket that meets the criteria.
+
+S252W_pocket_1 has the highest druggability score (0.573) and contains several residues with high contact changes, including MET A131, SER A132, ALA A133, and others that appear in the contact analysis with total_change values well above 3.0.
+
+```json
+{
+  "hotspots": "A2,A3,A4,A5,A8,A10,A11,A130,A131,A132,A133,E208,E211,E232,E233,E234,E235,E236,E237,E266,E268"
+}
+```

@@ -25,7 +25,6 @@ try:
         api_key="" # Anthropic API key here
     )
 except Exception as e:
-    print(f"Warning: Could not initialize Anthropic client: {e}")
     client = None
 
 # Get the project root directory
@@ -34,8 +33,8 @@ PROJECT_ROOT = Path(__file__).parent
 # Define mutation pairs using the current project structure
 MUTATION_PAIRS = [
     {
-        "mut": PROJECT_ROOT / "S252W.pdb",
-        "wt": PROJECT_ROOT / "FGFR2.pdb"
+        "mut": PROJECT_ROOT / "files" / "S252W.pdb",
+        "wt": PROJECT_ROOT / "files" / "FGFR2.pdb"
     }
 ]
 
@@ -138,11 +137,8 @@ def analyze_pockets(pdb_path):
         # Create a copy of the PDB file in the analysis directory if needed
         pdb_copy = OUTPUT_DIR / f"{base_name}.pdb"
         if not pdb_copy.exists():
-            print(f"✓ Copying {pdb_path} to {pdb_copy}")
             import shutil
             shutil.copy2(pdb_path, pdb_copy)
-        
-        print(f"✓ Running fpocket on {pdb_copy}")
         result = subprocess.run(
             ['fpocket', '-f', str(pdb_copy)],
             capture_output=True,
@@ -179,11 +175,7 @@ def analyze_pockets(pdb_path):
         
         return all_pockets
         
-    except subprocess.CalledProcessError as e:
-        print(f"⚠️ Error running fpocket: {e}")
-        return {}
-    except Exception as e:
-        print(f"⚠️ Error in pocket analysis: {e}")
+    except (subprocess.CalledProcessError, Exception):
         return {}
 
 def get_residue_boundaries(pdb_path: str) -> dict:
@@ -239,8 +231,7 @@ def extract_sequence_from_pdb(pdb_file, chain_id=None):
                     break
         
         return sequence
-    except Exception as e:
-        print(f"Error processing {pdb_file}: {str(e)}")
+    except Exception:
         return None
 
 def get_mutation_name(mut_path):
@@ -273,7 +264,6 @@ def get_output_files(output_dir, protein_name, mutation_name):
 
 def extract_sequences(wt_path, mut_path):
     """Extract sequences from PDB files and save to JSON."""
-    print("✓ Extracting sequences from PDB files")
     
     # Dictionary to store sequences
     sequences = {}
@@ -422,9 +412,9 @@ def collect_specifications():
         except Exception as e:
             print(f"Warning: Could not read {spec_path}: {e}")
 
-    # Create output file with datetime in project root
+    # Create output file with datetime in analysis directory
     dt_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_path = PROJECT_ROOT / f"specifications_{dt_str}.json"
+    out_path = OUTPUT_DIR / f"specifications_{dt_str}.json"
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)
     print(f"✓ Combined specifications written to {out_path}")
@@ -444,7 +434,7 @@ def collect_contact_changes():
         except Exception as e:
             print(f"Warning: Could not read {json_path}: {e}")
 
-    out_path = PROJECT_ROOT / "contact_changes.json"
+    out_path = OUTPUT_DIR / "contact_changes.json"
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)
     print(f"✓ Top 5 contact changes written to {out_path}")
@@ -461,28 +451,19 @@ def main():
             protein_name = get_protein_name(wt_path)
             output_files = get_output_files(output_dir, protein_name, mutation_name)
             
-            print(f"\n=== Processing {mutation_name} mutation ===")
+            print(f"✓ Processing {mutation_name}...")
             
-            # -- STEP 1: Load structures and create contact maps --
-            print("✓ Starting protein structure analysis workflow")
+            # Load structures and create contact maps
             wt_struct = md.load(wt_path)
             mut_struct = md.load(mut_path)
-            
-            print(f"✓ Loaded protein structures:")
-            print(f"  - Wildtype: {wt_path} ({wt_struct.topology.n_residues} residues)")
-            print(f"  - Mutant: {mut_path} ({mut_struct.topology.n_residues} residues)")
-            
             wt_map = ContactFrequency(wt_struct)
             mut_map = ContactFrequency(mut_struct)
-            print("✓ Contact maps generated")
+            print("✓ Contact Maps Generated")
             
             # Create difference object and get contact differences
             diff = AtomMismatchedContactDifference(wt_map, mut_map)
-            print("✓ Contact difference map computed")
             
-            # -- STEP 2: Generate and save contact difference data --
-            print("✓ Analyzing contact differences")
-            # Get top differences
+            # Generate and save contact difference data
             top_positive = diff.residue_contacts.most_common()[:20]
             bottom_negative = list(reversed(diff.residue_contacts.most_common()))[:20]
             
@@ -494,12 +475,12 @@ def main():
                 f.write("\nTop 20 negative differences:\n")
                 for (pair, val) in bottom_negative:
                     f.write(f"{pair} => {val:.3f}\n")
-            print(f"✓ Top contact differences saved to {output_files['output_txt']}")
+            print("✓ Contact Differences File Generated")
 
             # Save difference matrix as CSV
             df = diff.residue_contacts.df
             df.to_csv(output_files["diff_csv"], index=True, header=True)
-            print(f"✓ Contact difference matrix saved to {output_files['diff_csv']}")
+            print("✓ Contact Matrix CSV Generated")
             
             # Plot and save contact map
             fig, ax = diff.residue_contacts.plot()
@@ -508,14 +489,13 @@ def main():
             plt.ylabel("Residue")
             plt.savefig(output_files["output_png"], dpi=150)
             plt.close()
-            print(f"✓ Contact map plot saved to {output_files['output_png']}")
+            print("✓ Contact Map Plot Generated")
 
-            # -- STEP 3: Analyze residue changes --
-            print("✓ Identifying residues with contact changes")
+            # Analyze residue changes
             per_res_change = df.abs().sum(axis=1)
             changed_residues_series = per_res_change[per_res_change > 0].sort_values(ascending=False)
 
-            # -- STEP 4: Convert indices to PDB labels --
+            # Convert indices to PDB labels
             changed_residues = []
             for idx in changed_residues_series.index:
                 residue_obj = mut_struct.topology.residue(int(idx))
@@ -530,7 +510,7 @@ def main():
                     "total_change": float(changed_residues_series[idx])
                 })
 
-            # -- STEP 5: Write contact analysis results to JSON --
+            # Write contact analysis results to JSON
             output_data = {
                 "analysis_type": "contact_map_hotspots",
                 "description": (
@@ -542,40 +522,34 @@ def main():
 
             with open(output_files["output_json"], "w") as f:
                 json.dump(output_data, f, indent=2)
-            print(f"✓ Contact hotspots saved to {output_files['output_json']}")
+            print("✓ Contact Hotspots JSON Generated")
 
-            # -- STEP 6: Run fpocket analysis on both structures --
-            print("✓ Starting pocket analysis for the mutant structure only")
+            # Run fpocket analysis on mutant structure
             mutant_pockets = analyze_pockets(mut_path)
-
-            # Use only mutant pockets in the dictionary
             pocket_analysis = mutant_pockets
+            print("✓ fpocket Analysis Complete")
 
             # Write pocket analysis to JSON
             with open(output_files["pocket_json"], "w") as f:
                 json.dump(pocket_analysis, f, indent=2)
-            print(f"✓ Pocket analysis for mutant structure saved to {output_files['pocket_json']}")
+            print("✓ Pocket Analysis JSON Generated")
 
-            # -- STEP 7: Get residue boundaries for both structures --
-            print("✓ Determining residue boundaries for mutant structure")
+            # Get residue boundaries
             mutant_boundaries = get_residue_boundaries(mut_path)
             
             # Write to JSON file
             with open(output_files["boundaries_json"], "w") as f:
                 json.dump(mutant_boundaries, f, indent=2)
-            print(f"✓ Residue boundaries for mutant structure identified and saved to {output_files['boundaries_json']}")
+            print("✓ Residue Boundaries JSON Generated")
 
-            # -- STEP 8: Create combined analysis JSON --
-            print("✓ Creating combined analysis file")
-            
-            # Extract sequences
+            # Create combined analysis
             sequences = extract_sequences(wt_path, mut_path)
             
             # Save sequences separately
             sequences_file = output_files["sequences_json"]
             with open(sequences_file, "w") as f:
                 json.dump(sequences, f, indent=2)
-            print(f"✓ Sequences saved to {sequences_file}")
+            print("✓ Sequences JSON Generated")
             
             # Combine the data
             combined_data = {
@@ -588,42 +562,28 @@ def main():
             # Write combined JSON
             with open(output_files["combined_json"], "w") as f:
                 json.dump(combined_data, f, indent=2)
-            print(f"✓ Combined analysis saved to {output_files['combined_json']}")
+            print("✓ Combined Analysis JSON Generated")
             
-            # -- Generate specifications --
-            print("✓ Generating design specifications")
+            # Generate specifications
             hotspots = generate_specifications(combined_data)
             
             # Save specifications
             with open(output_files["spec_json"], "w") as f:
                 json.dump(hotspots, f, indent=2)
+            print("✓ Specifications JSON Generated")
             
-            # Print hotspots
-            print("\n=== Design Specifications ===")
-            print(f"Hotspots: {hotspots['hotspots']}")
-            
-            # Print fpocket output PDB path
+            # Output summary
             base_name = Path(mut_path).stem
             fpocket_dir = output_dir / f"{base_name}_out"
             pocket_pdb = fpocket_dir / f"{base_name}_out.pdb"
-            print(f"\n✓ PyMOL {pocket_pdb}")
             
-            print(f"✓ All analyses complete. Generated outputs in {output_dir}:")
-            print(f"  - Contact differences: {output_files['output_txt']}")
-            print(f"  - Contact matrix: {output_files['diff_csv']}")
-            print(f"  - Contact map plot: {output_files['output_png']}")
-            print(f"  - Contact hotspots: {output_files['output_json']}")
-            print(f"  - Pocket analysis: {output_files['pocket_json']}")
-            print(f"  - Residue boundaries: {output_files['boundaries_json']}")
-            print(f"  - Sequences: {output_files['sequences_json']}")
-            print(f"  - Combined analysis: {output_files['combined_json']}")
-            print(f"  - Specifications: {output_files['spec_json']}")
-            print("✓ Protein Structure Analysis Workflow Complete \n")
+            print(f"✓ Hotspots: {hotspots['hotspots']}")
+            print(f"✓ PyMOL: {pocket_pdb}")
+            print(f"✓ Output: {output_dir}")
 
         except Exception as e:
             mutation_name = get_mutation_name(mut_path)
-            print(f"\n⚠️ Error processing {mutation_name} mutation:")
-            print(f"  Error: {str(e)}")
+            print(f"✗ Error: {mutation_name} - {str(e)}")
             
             # Save error details to file
             error_file = OUTPUT_DIR / "error_log.txt"
@@ -632,9 +592,6 @@ def main():
                 f.write(f"Error: {str(e)}\n")
                 f.write(f"Wildtype: {wt_path}\n")
                 f.write(f"Mutant: {mut_path}\n")
-            
-            print(f"  Error details saved to {error_file}")
-            print("  Continuing with next mutation pair...\n")
             continue
 
 if __name__ == "__main__":

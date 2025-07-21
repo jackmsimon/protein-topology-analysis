@@ -1,0 +1,34 @@
+{
+  "S252W": [
+    {
+      "rank": 1,
+      "index": 274,
+      "pdb_label": "TRP E275",
+      "total_change": 24.0
+    },
+    {
+      "rank": 2,
+      "index": 202,
+      "pdb_label": "MET E203",
+      "total_change": 21.0
+    },
+    {
+      "rank": 3,
+      "index": 20,
+      "pdb_label": "LEU A21",
+      "total_change": 21.0
+    },
+    {
+      "rank": 4,
+      "index": 217,
+      "pdb_label": "VAL E218",
+      "total_change": 20.0
+    },
+    {
+      "rank": 5,
+      "index": 12,
+      "pdb_label": "TYR A13",
+      "total_change": 19.0
+    }
+  ]
+}
